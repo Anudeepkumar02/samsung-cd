@@ -20,6 +20,6 @@ spec:
     spec:
       containers:
         - name:  samsung-images
-          image: 2222s/samsung:V-6
+          image: 2222s/samsung:V-7
           ports:
             - containerPort: 8080
