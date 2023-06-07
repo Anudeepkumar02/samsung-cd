@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name:  samsung-deployment
+  labels:
+    name: webdep
+    app: demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: webpod
+      app: demo
+  template:
+    metadata:
+      name: webpod
+      labels:
+        name: webpod
+        app: demo
+    spec:
+      containers:
+        - name:  samsung-images
+          image: 2222s/samsung:V-6
+          ports:
+            - containerPort: 8080
